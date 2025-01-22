@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; 
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(206, 189, 167);
+  line-height: 1.5;
+  text-align: left;
+  min-height: 100vh;
+  min-width: 300px;
+}
+
+h1 {
+  font-size: 36px; 
+  font-weight: 700; 
+  text-transform: uppercase; 
+  margin: 0; 
+  color: rgb(200, 100, 100);
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 1.5em;
+  color: #4D2F17;
+}
+
+p, h2 {
+  margin-bottom: 1em;
+}
+
+img {
+  height: auto;
+  display: block; /* Предотвращает лишний отступ снизу */
+  margin: 1em 0; /* Отступ сверху и снизу */
+  max-width: 100%; /* Максимальная ширина 100%, чтобы вписать в контейнер */
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Гибкая сетка */
+  gap: 20px; /* Промежуток между ячейками */
+}
+
+.grid-item {
+  background-color: white; /* Фон для ячеек */
+  padding: 10px; /* Внутренние отступы */
+  border-radius: 5px; /* Скругленные углы */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для ячеек */
+}
+
+/* Изменение выделения текста */
+::selection {
+  background-color: rgba(200, 100, 100, 0.6);
+  color: #fff;
+}
+
+input, textarea, button {
+  font-family: 'Roboto', sans-serif; /* Используем тот же шрифт */
+  padding: 10px; /* Внутренние отступы */
+  border-radius: 5px; /* Скругленные углы */
+  border: 1px solid #ccc; /* Светлая обводка */
+  margin-bottom: 10px; /* Отступ снизу */
+  width: calc(100% - 22px); /* Учитываем паддинг и бордер */
+}
+
+/* Стили для ссылок */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus, button:focus {
+  outline: 2px solid rgb(200, 100, 100); /* Обводка при фокусе */
+}
+
+button {
+  cursor: pointer; /* Показать указатель при наведении */
+  background-color: rgb(200, 100, 100);
+  color: white; /* Цвет текста кнопки */
+  border: none; /* Без границы */
+}
+
+button:hover {
+  background-color: rgb(150, 70, 70); /* Изменение цвета на наведение */
+}
+
+button:active {
+  background-color: rgb(100, 40, 40); /* Цвет при нажатии */
+}
+
+/* Placeholder стили */
+input::placeholder,
+textarea::placeholder {
+  color: #aaa; /* Цвет подсказки */
+  opacity: 1; /* Полная непрозрачность */
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: rgb(200, 100, 100); /* Цвет подсказки при фокусе */
+}
+
+.abs-container {
+  position: relative; /* Для управления абсолютными элементами внутри */
+  min-height: 150px; /* Минимальная высота */
+}
+
+.absolute-box {
+  position: fixed; /* Абсолютное позиционирование */
+  top: 20px; /* Расположение 20px от верхней границы родителя */
+  right: 20px; /* Расположение 20px от правого края родителя */
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
+  border: 1px solid rgba(0, 0, 0, 0.5); /* Полупрозрачная обводка */
+  z-index: 1000;
+}
